@@ -54,8 +54,8 @@ def average_of_even_numbers(numbers):
     count = 0
     for num in numbers:
         if num % 2 == 0:
-            total += num
-        count += 1
+            count += num # Original: total += num / Update: count += num
+        total += 1 # Original: count += 1 / Update: total += 1
     return total
 
 
