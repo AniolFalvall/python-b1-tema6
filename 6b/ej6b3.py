@@ -63,12 +63,12 @@ Exemple:
 from typing import List
 
 
-def isprime(num):
+def is_prime(num):
     #Find the error and rewrite the correct code. 
-    if num < 1:
+    if num <= 1:  # Original: num < 1: / Update: if num <= 1:
         return False
     for i in range(2, num):
-        if num % i != 0:
+        if num % i == 0: # Original: if num % i != 0: / Update: if num % i == 0:
             return False
     return True
 
@@ -76,8 +76,8 @@ def isprime(num):
 def check_primes(nums: List[int]) -> List[bool]:
     #Find the error and rewrite the correct code. 
     results = []
-    for i in range(1, len(nums)):
-        results.append(isprime(i))
+    for num in nums: # Original: for i in range(1, len(nums)): / Update: for num in nums:
+        results.append(is_prime(num)) # Original: results.append(isprime(i)) / Update: results.append(is_prime(num))
     return results
 
 
